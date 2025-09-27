@@ -1,0 +1,11 @@
+<h2>Dashboard</h2>
+<div *ngFor="let project of projects">
+    <h3>{{ project.name }}</h3>
+    <p>{{ project.description }}</p>
+    <p>
+        Tasks:
+        Not Started {{ getTaskSummary(project).notStarted }},
+        In Progress {{ getTaskSummary(project).inProgress }},
+        Completed {{ getTaskSummary(project).completed }}
+    </p>
+</div>
